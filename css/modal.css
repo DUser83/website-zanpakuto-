@@ -1,0 +1,190 @@
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center; align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    width: 90%;
+    max-width: 900px;
+    height: 85vh;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: zoomIn 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28); /* Пружинистая анимация */
+}
+
+@keyframes zoomIn { 
+    from { transform: scale(0.9); opacity: 0; } 
+    to { transform: scale(1); opacity: 1; } 
+}
+
+.close-modal {
+    position: absolute; top: 10px; right: 20px;
+    font-size: 32px; color: #aaa; cursor: pointer;
+    z-index: 10; transition: color 0.3s;
+    line-height: 1;
+}
+.close-modal:hover { color: #fff; }
+
+.modal-body { 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+.modal-img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    object-position: top;
+    border-bottom: 1px solid #333;
+    display: block;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) { 
+    .modal-body { flex-direction: row; } 
+    
+    .modal-img { 
+        width: 40%; /* 40% ширины */
+        height: 100%; /* Полная высота */
+        border-bottom: none;
+        border-right: 1px solid #333;
+    }
+}
+
+.modal-text { 
+    padding: 25px; 
+    flex: 1; /* Занимает всё оставшееся место */
+    overflow-y: auto; /* ВКЛЮЧАЕТ ПРОКРУТКУ ТОЛЬКО ТУТ */
+    color: #e0e0e0;
+}
+
+.modal-text::-webkit-scrollbar { width: 8px; }
+.modal-text::-webkit-scrollbar-track { background: #1a1a1a; }
+.modal-text::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+.modal-text::-webkit-scrollbar-thumb:hover { background: #666; }
+
+.modal-title { 
+    font-size: 28px; 
+    border-bottom: 1px solid #333; 
+    padding-bottom: 10px; 
+    margin-top: 0; 
+    color: #fff;
+}
+.modal-sword-title { 
+    color: #bd00ff; 
+    font-size: 22px; 
+    margin: 15px 0 10px; 
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+}
+
+.status-badges { margin: 10px 0 20px; }
+.badge {
+    padding: 4px 10px; 
+    border: 1px solid #444;
+    border-radius: 4px; 
+    font-size: 11px; 
+    margin-right: 5px;
+    background: #111; 
+    color: #666;
+    text-transform: uppercase;
+}
+.badge.active { background: #333; border-color: #777; color: #fff; }
+
+.base-forms {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.base-form-item {
+    flex: 1;
+    background: rgba(255,255,255,0.03);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.base-form-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.base-form-item span {
+    display: block;
+    font-size: 10px;
+    color: #bd00ff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.release-controls {
+    display: flex; gap: 10px; margin: 20px 0;
+}
+
+.release-btn {
+    flex: 1; padding: 12px;
+    border: none; border-radius: 6px;
+    font-weight: bold; text-transform: uppercase;
+    cursor: pointer; transition: 0.2s;
+    color: #fff;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+}
+
+.shikai-btn {
+    background: linear-gradient(135deg, #004d40, #00695c);
+    box-shadow: 0 4px 0 #00382e;
+}
+.shikai-btn:active { transform: translateY(4px); box-shadow: none; }
+
+.bankai-btn {
+    background: linear-gradient(135deg, #4a148c, #7b1fa2);
+    box-shadow: 0 4px 0 #320b63;
+}
+.bankai-btn:active { transform: translateY(4px); box-shadow: none; }
+
+.release-content {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    border-left: 3px solid #bd00ff;
+    animation: fadeUp 0.4s ease-out;
+}
+
+.release-content img {
+    width: 100%; 
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 5px; 
+    margin-bottom: 15px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: block;
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

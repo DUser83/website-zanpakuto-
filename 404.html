@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Вы заблудились в Уэко Мундо</title>
+    <meta http-equiv="refresh" content="7; url=index.html">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-image: url('img/Aizen.gif'); 
+            background-size: cover;     
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;         
+            display: flex;             
+            justify-content: center;     
+            align-items: center; 
+            color: #f0f0f0;             
+            overflow: hidden;            
+        }
+        .error-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 50px;
+            border-radius: 15px;
+            border: 2px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(3px);
+        }
+
+        h1 {
+            font-size: 120px;
+            margin: 0;
+            line-height: 1;
+            color: #ff3333;
+            text-shadow: 3px 3px 5px #000;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .return-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .return-btn:hover {
+            background-color: #000;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <h2>Добро пожаловать в Уэко Мундо</h2>
+        <p>Кажется, вы открыли Гарганту не туда. Этой страницы не существует.</p>
+        <p>Вас перенесет обратно в Сообщество Душ через несколько секунд...</p>
+        <a href="index.html" class="return-btn">Вернуться немедленно</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+User-agent: *
+Allow: / 
+Disallow: /404.html       
+Disallow: /hueco-mundo.gif  
+Disallow: /cgi-bin/       
+Disallow: /*?*
+Disallow: /private/ 
+
+User-agent: Yandex
+Disallow: /404.html
+Disallow: /hueco-mundo.gif
+Crawl-delay: 2               
+
+Host: zanpakuto.web-prj.ru
+
+Sitemap: http://zanpakuto.web-prj.ru/sitemap.xml

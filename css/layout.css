@@ -1,0 +1,64 @@
+header {
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-container { position: relative; display: inline-block; }
+
+.menu-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.menu-btn:hover { background-color: #cccccc; }
+
+.dropdown-panel {
+    position: absolute;
+    top: 100%; right: 0;
+    width: 200px;
+    background-color: #2a2a2a;
+    border: 1px solid #fff;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0; visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.nav-container:hover .dropdown-panel {
+    opacity: 1; visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-block {
+    display: block; padding: 12px; margin-bottom: 5px;
+    background-color: #000; color: #fff;
+    text-decoration: none; text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.2s, background 0.2s;
+}
+.nav-block:hover { background-color: #fff; color: #000; transform: scale(1.05); }
+
+footer {
+    padding: 20px; text-align: center; font-size: 12px;
+    margin-top: 50px; border-top: 1px solid #333;
+    background-color: #111;
+}
+.online-status { margin-bottom: 15px; font-size: 14px; color: #ccc; }

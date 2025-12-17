@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanpakuto: Вайзарды</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .base-forms {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .base-form-item {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .base-form-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            background-color: rgba(0,0,0,0.3);
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .base-form-item span {
+            display: block;
+            font-size: 0.75em;
+            color: #bd00ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .form-desc {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            border-left: 2px solid #555;
+            padding-left: 10px;
+        }
+        .release-content img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BLEACH: VIZARDS</div>
+        <nav class="nav-container">
+            <button class="menu-btn">Вайзарды ▾</button>
+            <div class="dropdown-panel">
+                <a href="index.html" class="nav-block">Главная</a>
+                <a href="captains.html" class="nav-block">Капитаны</a>
+                <a href="lieutenants.html" class="nav-block">Лейтенанты</a>
+                <a href="others.html" class="nav-block">Прочее</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Вайзарды (Маски)</h1>
+        <p>Группа синигами, получивших силы пустых в результате экспериментов Айзена. Изгнанные из Общества Душ, они научились контролировать свои маски.</p>
+
+        <div class="char-grid">
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.1s;" data-name="Синдзи Хирако" data-img="img/Vizards/shinji.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-shinji"><img src="img/Vizards/shinji.jpg" alt="Синдзи"><div class="char-info"><h3 class="char-name">Синдзи Хирако</h3><div class="sword-preview">Саканаде</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.2s;" data-name="Хиори Саругаки" data-img="img/Vizards/hiyori.jpg" data-shikai="true" data-bankai="false" data-desc="LOAD_ID:content-hiyori"><img src="img/Vizards/hiyori.jpg" alt="Хиори"><div class="char-info"><h3 class="char-name">Хиори Саругаки</h3><div class="sword-preview">Кубикири Орочи</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.3s;" data-name="Хачиген Ушода" data-img="img/Vizards/hachi.jpg" data-shikai="false" data-bankai="false" data-desc="LOAD_ID:content-hachi"><img src="img/Vizards/hachi.jpg" alt="Хачи"><div class="char-info"><h3 class="char-name">Хачиген Ушода</h3><div class="sword-preview">Кидо</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.4s;" data-name="Кенсей Мугурума" data-img="img/Vizards/kensei.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-kensei"><img src="img/Vizards/kensei.jpg" alt="Кенсей"><div class="char-info"><h3 class="char-name">Кенсей Мугурума</h3><div class="sword-preview">Тачиказа</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.5s;" data-name="Лав Аикава" data-img="img/Vizards/love.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-love"><img src="img/Vizards/love.jpg" alt="Лав"><div class="char-info"><h3 class="char-name">Лав Аикава</h3><div class="sword-preview">Тенгумару</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.6s;" data-name="Маширо Куна" data-img="img/Vizards/mashiro.jpg" data-shikai="false" data-bankai="false" data-desc="LOAD_ID:content-mashiro"><img src="img/Vizards/mashiro.jpg" alt="Маширо"><div class="char-info"><h3 class="char-name">Маширо Куна</h3><div class="sword-preview">Рукопашный бой</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.7s;" data-name="Роджуро Оторибаши" data-img="img/Vizards/rose.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-rose"><img src="img/Vizards/rose.jpg" alt="Роуз"><div class="char-info"><h3 class="char-name">Роджуро Оторибаши</h3><div class="sword-preview">Киншара</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.8s;" data-name="Лиза Ядомару" data-img="img/Vizards/lisa.jpg" data-shikai="true" data-bankai="false" data-desc="LOAD_ID:content-lisa"><img src="img/Vizards/lisa.jpg" alt="Лиза"><div class="char-info"><h3 class="char-name">Лиза Ядомару</h3><div class="sword-preview">Хагуро Тонбо</div></div></div>
+        </div>
+
+        <div id="content-shinji" style="display: none;">
+            <p><strong>Бывший (и нынешний) Капитан 5-го отряда.</strong><br>
+            Лидер Вайзардов. Эксцентричный, говорит на кансайском диалекте. Был первым, кто заподозрил Айзена, но всё равно попал в его ловушку.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/shinji_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+            <h3 class="modal-sword-title">Саканаде (Гладящий против шерсти)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/Vizards/Shikai/shinji.jpg" alt="Shikai">
+                <p>Команда: <em>«Опрокинься»</em>. Меч испускает розовый туман. Кто его вдохнет, попадает в «перевернутый мир»: лево и право, верх и низ, перед и зад меняются местами. Также инвертируется направление атаки и место ранения.</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/Vizards/Bankai/shinji.jpg" alt="Bankai">
+                <p><strong>Сакашима Йокошима Хаппофусагари (Все злодеи в мире перевернуты).</strong> Превращает всех «друзей» во «врагов» и наоборот. Эффективен только против группы врагов, так как заставляет их убивать друг друга. Запрещен к использованию рядом с союзниками.</p>
+            </div>
+        </div>
+
+        <div id="content-hiyori" style="display: none;">
+            <p><strong>Бывший Лейтенант 12-го отряда.</strong><br>
+            Агрессивная, вспыльчивая девочка, которая постоянно бьет Синдзи тапком. Осталась в мире живых после победы над Айзеном, не желая возвращаться в Готей.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/hiyori_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+            <h3 class="modal-sword-title">Кубикири Орочи (Змей, отсекающий голову)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/Vizards/Shikai/hiyori.jpg" alt="Shikai">
+                <p>Команда: <em>«Раскромсай»</em>. Превращается в огромный тесак с зазубренным лезвием, похожим на пилу. Предназначен для грубых и жестоких рубящих атак.</p>
+            </div>
+        </div>
+
+        <div id="content-hachi" style="display: none;">
+            <p><strong>Бывший Лейтенант Кидо-отряда.</strong><br>
+            Добродушный гигант, вежливый и спокойный. Мастер Кидо, способный создавать барьеры невероятной сложности. Помог восстановить руку Орихиме.</p>
+            <h3 class="modal-sword-title">Мастер Кидо</h3>
+            <p>Хачи редко использует занпакто. Его сила — в сочетании кидо с силой пустого. Он может использовать барьеры для атаки, защиты и даже телепортации части тела противника внутрь барьера.</p>
+        </div>
+
+        <div id="content-kensei" style="display: none;">
+            <p><strong>Бывший (и нынешний) Капитан 9-го отряда.</strong><br>
+            Суровый, накачанный мужчина с татуировкой «69» на животе (которую в его честь набил Хисаги). Вернулся на пост капитана.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/kensei_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+            <h3 class="modal-sword-title">Тачиказа (Ветер, перерезающий землю)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/Vizards/Shikai/kensei.jpg" alt="Shikai">
+                <p>Команда: <em>«Сдуй»</em>. Превращается в боевой нож. Позволяет управлять потоками сжатого воздуха, которые могут разрезать врага или взрываться при контакте.</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/Vizards/Bankai/kensei.jpg" alt="Bankai">
+                <p><strong>Теккен Тачиказа (Железный кулак ветра).</strong> Меч превращается в два кастета с лезвиями. Сила ветра не выстреливает наружу, а концентрируется в кулаках. Каждый удар вызывает взрыв внутри тела противника.</p>
+            </div>
+        </div>
+
+        <div id="content-love" style="display: none;">
+            <p><strong>Бывший Капитан 7-го отряда.</strong><br>
+            Любит читать мангу (Jump) и носит солнцезащитные очки. Спокоен и расслаблен.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/love_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+            <h3 class="modal-sword-title">Тенгумару (Небесный пес)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/Vizards/Shikai/love.jpg" alt="Shikai">
+                <p>Команда: <em>«Раздави»</em>. Превращается в огромную черную дубину (канабо) с шипами. Может выстреливать мощными огненными залпами («Хифуки но Козучи» — Молот огненного дыхания).</p>
+            </div>
+            <div class="release-content bankai-content">
+                <p>Банкай Лава не был показан в манге, хотя он утверждал, что владеет им.</p>
+            </div>
+        </div>
+
+        <div id="content-mashiro" style="display: none;">
+            <p><strong>Бывший Лейтенант 9-го отряда.</strong><br>
+            Инфантильная и гиперактивная. Носит костюм супергероя. Вернулась в Готей как «Супер-Лейтенант» 9-го отряда (вместе с Хисаги).</p>
+            <h3 class="modal-sword-title">Маширо Кик</h3>
+            <p>Маширо уникальна тем, что может удерживать маску Пустого дольше всех (более 15 часов) без тренировок. Она сражается исключительно врукопашную, используя мощные удары ногами.</p>
+        </div>
+
+        <div id="content-rose" style="display: none;">
+            <p><strong>Бывший (и нынешний) Капитан 3-го отряда.</strong><br>
+            Артистичная натура, любит музыку и искусство. Говорит поэтично.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/rose_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+
+            <h3 class="modal-sword-title">Киншара (Золотое саловое дерево)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/Vizards/Shikai/rose.jpg" alt="Shikai">
+                <p>Команда: <em>«Играй»</em>. Меч превращается в золотой хлыст с цветком на конце. Роуз использует его как дирижерскую палочку. Техника «Соната №11: Изаёй Бара» создает ударную волну.</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/Vizards/Bankai/rose.jpg" alt="Bankai">
+                <p><strong>Киншара Бутодан (Танцевальная труппа золотого салового дерева).</strong> Призывает гигантских танцоров. Это сила иллюзий, основанная на музыке. Если враг слышит музыку, иллюзия становится реальностью (огонь сжигает, вода топит). Слабость: если враг разрушит свои барабанные перепонки, банкай бесполезен.</p>
+            </div>
+        </div>
+
+        <div id="content-lisa" style="display: none;">
+            <p><strong>Бывший Лейтенант 8-го отряда (Ныне — Капитан 8-го отряда).</strong><br>
+            Любит читать эротическую мангу и носит школьную форму. Бывшая подчиненная Кьёраку, занявшая его место после его повышения.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/lisa_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+            <h3 class="modal-sword-title">Хагуро Тонбо (Железная стрекоза)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/Vizards/Shikai/lisa.jpg" alt="Shikai">
+                <p>Команда: <em>«Дроби»</em>. Меч превращается в огромное древковое оружие с гигантским лезвием на конце (похоже на лопату монаха или алебарду). Лиза использует его, раскручивая для нанесения мощных рубящих ударов.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer><p>&copy; 2025 Bleach Fan Site</p></footer>
+    
+    <div id="char-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCharModal()">&times;</span>
+            <div class="modal-body">
+                <img src="" id="modal-img" class="modal-img" alt="">
+                <div class="modal-text">
+                    <h2 id="modal-name" class="modal-title"></h2>
+                    <div class="status-badges">
+                        <span id="badge-shikai" class="badge">Шикай</span>
+                        <span id="badge-bankai" class="badge">Банкай</span>
+                    </div>
+                    <div id="modal-desc"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/protection.js"></script><script src="js/ui.js"></script><script src="js/counter.js"></script>
+</body>
+</html>

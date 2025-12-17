@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+    header { flex-direction: column; gap: 15px; text-align: center; }
+    .logo { margin-bottom: 10px; }
+    
+    .dropdown-panel {
+        width: 100%; position: static;
+        transform: none; display: none;
+        box-shadow: none; margin-top: 10px;
+    }
+    
+    .nav-container:hover .dropdown-panel { display: block; }
+}

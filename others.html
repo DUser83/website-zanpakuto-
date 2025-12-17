@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanpakuto: Другие</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .base-forms {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .base-form-item {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        .base-form-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            background-color: rgba(0,0,0,0.3);
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .base-form-item span {
+            display: block;
+            font-size: 0.75em;
+            color: #bd00ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .form-desc {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            border-left: 2px solid #555;
+            padding-left: 10px;
+        }
+        .release-content img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .ichigo-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .ichigo-item {
+            text-align: center;
+            background: #222;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .ichigo-item img {
+            max-height: 150px;
+            width: 100%;
+            object-fit: contain;
+        }
+        .ichigo-item p {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BLEACH: OTHERS</div>
+        <nav class="nav-container">
+            <button class="menu-btn">Прочее ▾</button>
+            <div class="dropdown-panel">
+                <a href="index.html" class="nav-block">Главная</a>
+                <a href="captains.html" class="nav-block">Капитаны</a>
+                <a href="lieutenants.html" class="nav-block">Лейтенанты</a>
+                <a href="vizards.html" class="nav-block">Вайзарды</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Временные Синигами и Другие</h1>
+        <p>Герои, не входящие в стандартную иерархию Готея 13.</p>
+
+        <div class="char-grid">
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.1s;" data-name="Ичиго Куросаки" data-img="img/OthersChar/ichigo.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-ichigo"><img src="img/OthersChar/ichigo.jpg" alt="Ичиго"><div class="char-info"><h3 class="char-name">Ичиго Куросаки</h3><div class="sword-preview">Зангецу</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.2s;" data-name="Иссин Куросаки" data-img="img/OthersChar/isshin.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-isshin"><img src="img/OthersChar/isshin.jpg" alt="Иссин"><div class="char-info"><h3 class="char-name">Иссин Куросаки</h3><div class="sword-preview">Энгецу</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.3s;" data-name="Рукия Кучики" data-img="img/OthersChar/rukia.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-rukia"><img src="img/OthersChar/rukia.jpg" alt="Рукия"><div class="char-info"><h3 class="char-name">Рукия Кучики</h3><div class="sword-preview">Соде но Шираюки</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.4s;" data-name="Иккаку Мадараме" data-img="img/OthersChar/ikkaku.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-ikkaku"><img src="img/OthersChar/ikkaku.jpg" alt="Иккаку"><div class="char-info"><h3 class="char-name">Иккаку Мадараме</h3><div class="sword-preview">Хозукимару</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.5s;" data-name="Юмичика Аясегава" data-img="img/OthersChar/yumichika.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-yumichika"><img src="img/OthersChar/yumichika.jpg" alt="Юмичика"><div class="char-info"><h3 class="char-name">Юмичика Аясегава</h3><div class="sword-preview">Рурииро Куджаку</div></div></div>
+            <div class="char-card" onclick="openCharModal(this)" style="animation-delay: 0.6s;" data-name="Кисуке Урахара" data-img="img/OthersChar/urahara.jpg" data-shikai="true" data-bankai="true" data-desc="LOAD_ID:content-urahara"><img src="img/OthersChar/urahara.jpg" alt="Урахара"><div class="char-info"><h3 class="char-name">Кисуке Урахара</h3><div class="sword-preview">Бенихиме</div></div></div>
+        </div>
+
+        <div id="content-ichigo" style="display: none;">
+            <p><strong>Временный Синигами.</strong><br>
+            Уникальный гибрид: сын синигами (Иссин) и квинси (Масаки), унаследовавший также силу Пустого. Герой Тысячелетней Кровавой Войны.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/zangetsu_sealed.jpg" alt="Sealed"><span>Запечатанный (Огромный)</span></div>
+                <div class="base-form-item"><img src="img/Zanpakuto/zangetsu_spirit.jpg" alt="Spirit"><span>Дух: Старик и Хичиго</span></div>
+            </div>
+
+            <h3 class="modal-sword-title">Зангецу (Рубящая луна)</h3>
+            
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Эволюция Шикая</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Эволюция Банкая</button>
+            </div>
+
+            <div class="release-content shikai-content">
+                <p style="margin-bottom:10px;"><strong>Формы Шикая:</strong></p>
+                <div class="ichigo-gallery">
+                    <div class="ichigo-item">
+                        <img src="img/OthersChar/Shikai/ichigo_v1.jpg" alt="Original Shikai">
+                        <p>1. Первый Шикай (Тесак)</p>
+                    </div>
+                    <div class="ichigo-item">
+                        <img src="img/OthersChar/Shikai/ichigo_fullbring.jpg" alt="Fullbring Shikai">
+                        <p>2. После Фулбринга</p>
+                    </div>
+                    <div class="ichigo-item" style="grid-column: span 2;">
+                        <img src="img/OthersChar/Shikai/ichigo_true.jpg" alt="True Shikai">
+                        <p>3. Истинный Шикай (Парные клинки)</p>
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">
+                    <strong style="color: #aaa;">Фальшивый Шикай:</strong> Огромный тесак без гарды. Эта форма была результатом того, что сила Квинси Ичиго (Старик Зангецу) сдерживала его истинную силу.<br>
+                    <strong style="color: #bd00ff;">Истинный Шикай:</strong> Парные клинки. Длинный меч олицетворяет его внутреннего Пустого (истинного Зангецу), а короткий — силу Квинси.
+                </p>
+            </div>
+
+            <div class="release-content bankai-content">
+                <p style="margin-bottom:10px;"><strong>Формы Банкая (Тенса Зангецу):</strong></p>
+                <div class="ichigo-gallery">
+                    <div class="ichigo-item">
+                        <img src="img/OthersChar/Bankai/ichigo_v1.jpg" alt="Original Bankai">
+                        <p>1. Первый Банкай</p>
+                    </div>
+                    <div class="ichigo-item">
+                        <img src="img/OthersChar/Bankai/ichigo_fullbring.jpg" alt="Fullbring Bankai">
+                        <p>2. После Фулбринга</p>
+                    </div>
+                    <div class="ichigo-item" style="grid-column: span 2;">
+                        <img src="img/OthersChar/Bankai/ichigo_true.jpg" alt="True Bankai">
+                        <p>3. Истинный Банкай</p>
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">
+                    <strong style="color: #aaa;">Фальшивый Банкай:</strong> Тонкая черная катана. Вся огромная сила сжималась в малую форму, даруя сверхскорость.<br>
+                    <strong style="color: #bd00ff;">Истинный Банкай:</strong> Объединяет два меча в один гигантский клинок. Внешняя белая часть символизирует ножны, внутренняя черная — сам меч.
+                </p>
+            </div>
+        </div>
+
+        <div id="content-isshin" style="display: none;">
+            <p><strong>Бывший Капитан 10-го отряда и Глава клана Шиба.</strong><br>
+            Отец Ичиго. Пожертвовал своей силой синигами на 20 лет, чтобы спасти Масаки Куросаки (Квинси) от пустофикации. Сейчас восстановил силы.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/isshin_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                </div>
+            <p class="form-desc">
+                <strong>Запечатанный вид:</strong> Катана с шестиугольной гардой, привязанная к поясу шнуром.
+            </p>
+
+            <h3 class="modal-sword-title">Энгецу (Убывающая луна)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/OthersChar/Shikai/isshin.jpg" alt="Shikai">
+                <p>Команда: <em>«Гори»</em>. Огненный занпакто. Лезвие покрывается пламенем. Уникальная способность: Иссин может плюнуть на лезвие своей кровью, создавая мощнейший огненный поток (похоже на Гецугу, но огненную).</p>
+            </div>
+            <div class="release-content bankai-content">
+                <p>Банкай Иссина упоминался, но не был показан. Известно лишь, что он сильно нагружает тело владельца, поэтому Иссин не мог использовать его, пока был ранен в бою с Айзеном.</p>
+            </div>
+        </div>
+
+        <div id="content-rukia" style="display: none;">
+            <p><strong>Капитан 13-го отряда (Нынешний).</strong><br>
+            Приемная сестра Бьякуи. Прошла путь от рядового бойца, отдавшего силы Ичиго, до капитана, сменившего Укитаке.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/rukia_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                <div class="base-form-item"><img src="img/Zanpakuto/rukia_spirit.jpg" alt="Spirit"><span>Дух Меча</span></div>
+            </div>
+            <p class="form-desc">
+                <strong>Дух меча:</strong> Прекрасная женщина в белом кимоно, повелевающая льдом (Юки-онна).
+            </p>
+
+            <h3 class="modal-sword-title">Соде но Шираюки (Рукав белого снега)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">❄️ Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">❄️ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/OthersChar/Shikai/rukia.jpg" alt="Shikai">
+                <p>Команда: <em>«Танцуй»</em>. Считается самым красивым мечом в Обществе Душ. Истинная сила не в создании льда, а в понижении температуры тела владельца до абсолютного нуля (-273,15°C), замораживая всё, чего коснется Рукия.</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/OthersChar/Bankai/rukia.jpg" alt="Bankai">
+                <p><strong>Хакка но Тогаме (Белая кара).</strong> Мгновенно замораживает огромную область вокруг Рукии в столб абсолютного холода. Любой, кто попадет в радиус действия, рассыпается в ледяную пыль. Очень опасен для самой Рукии, требует медленной "разморозки".</p>
+            </div>
+        </div>
+
+        <div id="content-ikkaku" style="display: none;">
+            <p><strong>3-й офицер (позже — Лейтенант) 11-го отряда.</strong><br>
+            Обожает битвы и своего капитана Кенпачи. Скрывал свой банкай, чтобы его не повысили до капитана другого отряда, так как хочет умереть под командованием Зараки.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/ikkaku_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                <div class="base-form-item"><img src="img/Zanpakuto/ikkaku_spirit.jpg" alt="Spirit"><span>Дух Меча</span></div>
+            </div>
+            <p class="form-desc">
+                <strong>Запечатанный вид:</strong> Катана, рукоять которой содержит мазь для остановки кровотечения.<br>
+                <strong>Дух меча:</strong> Танцующий клоун/демон с деревянным оружием.
+            </p>
+
+            <h3 class="modal-sword-title">Хозукимару (Свет демона)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/OthersChar/Shikai/ikkaku.jpg" alt="Shikai">
+                <p>Команда: <em>«Расти» / «Расколись»</em>. Меч превращается в копье. По второй команде оно разделяется на секции, соединенные цепью (сан-сецу-кон), что делает атаки непредсказуемыми.</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/OthersChar/Bankai/ikkaku.jpg" alt="Bankai">
+                <p><strong>Рюмон Хозукимару (Врата дракона).</strong> Три гигантских лезвия (два в руках, одно за спиной). Банкай «ленивый»: чтобы достичь полной силы, нужно заполнить красным цветом дракона, выгравированного на лезвии, активно сражаясь.</p>
+            </div>
+        </div>
+
+        <div id="content-yumichika" style="display: none;">
+            <p><strong>5-й офицер (позже — 3-й офицер) 11-го отряда.</strong><br>
+            Нарцисс, ценящий красоту. Скрывает кидо-способности своего меча, так как в 11-м отряде презирают все, кроме грубой силы.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/yumichika_sealed.jpg" alt="Sealed"><span>Запечатанный</span></div>
+                <div class="base-form-item"><img src="img/Zanpakuto/yumichika_spirit.jpg" alt="Spirit"><span>Дух Меча</span></div>
+            </div>
+            <p class="form-desc">
+                <strong>Дух меча:</strong> Нарциссичный мужчина с павлиньими перьями.
+            </p>
+
+            <h3 class="modal-sword-title">Рурииро Куджаку (Лазурный павлин)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" style="background:linear-gradient(45deg, #555, #777);" 
+                        onclick="toggleRelease('shikai', this)">
+                    🦚 Фальшивый Шикай
+                </button>
+                <button class="release-btn bankai-btn" style="background:linear-gradient(45deg, #00c6ff, #0072ff);" 
+                        onclick="toggleRelease('bankai', this)">
+                    🦚 Истинный Шикай
+                </button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/OthersChar/Shikai/yumichika_false.jpg" alt="Fuji Kujaku">
+                <p><strong>Фуджи Куджаку (Глициниевый Павлин)</strong>. Юмичика намеренно называет меч неправильным цветом (Глициния вместо Лазури). Меч «обижается» и превращается лишь в серп с четырьмя лезвиями без особых способностей.</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/OthersChar/Shikai/yumichika_true.jpg" alt="Ruri'iro Kujaku">
+                <p><strong>Рурииро Куджаку (Лазурный Павлин)</strong>. По команде <em>«Рви и безумствуй»</em> клинки превращаются в светящиеся лозы. Они опутывают врага, высасывают всю его реацу и передают её Юмичике (он даже может съесть бутоны, чтобы исцелиться). Смертельная техника, запрещенная в 11-м отряде.</p>
+            </div>
+        </div>
+
+        <div id="content-urahara" style="display: none;">
+            <p><strong>Бывший Капитан 12-го отряда и Создатель НИИ Синигами.</strong><br>
+            Гениальный ученый, изгнанный из Общества Душ за эксперименты с пустификацией (на самом деле подставлен Айзеном). Наставник Ичиго.</p>
+            
+            <div class="base-forms">
+                <div class="base-form-item"><img src="img/Zanpakuto/urahara_sealed.jpg" alt="Sealed"><span>Запечатанный (Трость)</span></div>
+            </div>
+            <p class="form-desc">
+                <strong>Запечатанный вид:</strong> Скрыт внутри трости (шикомидзуэ). В основании трости есть печать, выбивающая душу из тела.<br>
+            </p>
+
+            <h3 class="modal-sword-title">Бенихиме (Алая принцесса)</h3>
+            <div class="release-controls">
+                <button class="release-btn shikai-btn" onclick="toggleRelease('shikai', this)">🔥 Шикай</button>
+                <button class="release-btn bankai-btn" onclick="toggleRelease('bankai', this)">⚡ Банкай</button>
+            </div>
+            <div class="release-content shikai-content">
+                <img src="img/OthersChar/Shikai/urahara.jpg" alt="Shikai">
+                <p>Команда: <em>«Проснись» / «Пой»</em>. Меч испускает красную энергию. Умеет создавать щиты («Чигасуми но Тате»), стрелять сгустками энергии («Бенишидаре») и связывать врага сетью («Шибари Бенихиме»).</p>
+            </div>
+            <div class="release-content bankai-content">
+                <img src="img/OthersChar/Bankai/urahara.jpg" alt="Bankai">
+                <p><strong>Каннонбираки Бенихиме Атараме (Вскрытие Алой Принцессы).</strong> Призывает огромную женщину-марионетку. Способность: перекраивать всё, чего она коснется. Может «распороть» врага или «сшить» раны Урахары, и даже перестроить структуру поля боя.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bleach Fan Site</p>
+    </footer>
+
+    <div id="char-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCharModal()">&times;</span>
+            <div class="modal-body">
+                <img src="" id="modal-img" class="modal-img" alt="">
+                <div class="modal-text">
+                    <h2 id="modal-name" class="modal-title"></h2>
+                    <div class="status-badges">
+                        <span id="badge-shikai" class="badge">Шикай</span>
+                        <span id="badge-bankai" class="badge">Банкай</span>
+                    </div>
+                    <div id="modal-desc"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/protection.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/counter.js"></script>
+</body>
+</html>
